@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seaweed Animation with iFrame</title>
+  <style>
+    body {
+      margin: 0;
+      overflow: hidden;
+    }
+
+    iframe {
+      position: absolute;
+      top: 10%;
+      left: 10%;
+      width: 80%;
+      height: 80%;
+      border: none;
+      z-index: 1; /* iframe 在下層 */
+    }
+
+    canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2; /* p5.js 畫布在上層 */
+    }
+  </style>
+</head>
+<body>
+  <!-- iFrame -->
+  <iframe src="https://www.et.tku.edu.tw"></iframe>
+
+  <!-- 引用 p5.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+  <script src="sketch.js"></script>
+</body>
+</html>
